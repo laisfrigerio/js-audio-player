@@ -10,9 +10,17 @@ An audio player made with pure javascript :blue_heart:
 
 # :camera: Screenshots
 
-![Desktop](https://raw.githubusercontent.com/laisfrigerio/js-audio-player/master/screenshots/desktop.png)
+<p align="center">
+  <a href="https://github.com/laisfrigerio/js-audio-player">
+    <img src="./screenshots/desktop.png" alt="Application screenshot from Desktop device">
+  </a>
+</p>
 
-![Mobile](https://raw.githubusercontent.com/laisfrigerio/js-audio-player/master/screenshots/mobile.png)
+<p align="center">
+  <a href="https://github.com/laisfrigerio/js-audio-player">
+    <img src="./screenshots/mobile.png" alt="Application screenshot from Mobile device">
+  </a>
+</p>
 
 ## 🛠️ Stack
 
