@@ -1,0 +1,30 @@
+{
+  "name": "js-audio-player",
+  "version": "0.0.1",
+  "description": "Audio Player with pure javascript",
+  "scripts": {
+    "dev:css": "gulp css",
+    "dev:js": "gulp js",
+    "dev:views": "gulp views",
+    "dev:watch": "gulp watch",
+    "build": "gulp"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "audio",
+    "player"
+  ],
+  "author": "Lais Frigério da Silva",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-csso": "^4.0.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify": "^3.0.2"
+  }
+}

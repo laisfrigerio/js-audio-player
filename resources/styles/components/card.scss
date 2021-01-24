@@ -1,0 +1,29 @@
+.card {
+    @extend %flexbox;
+    @include flex-align-items(center);
+    @include flex-dir(column);
+    @include flex-jus(center);
+    background-color: $white;
+    box-shadow: 0 0 15px 4px $gray-border;
+    max-width: 350px;
+
+    .card-content {
+        padding: 10px 20px;
+
+        * { color: $gray-text; }
+        h2 { letter-spacing: 5px; }
+        h3 { 
+            font-size: 13px; 
+            margin-top: 5px;
+        }
+        audio { margin-top: 10px; }
+    }
+
+    .card-title {
+        padding: 15px 0 4px;
+        h1 { 
+            color: $blue; 
+            letter-spacing: -2px;
+        }
+    }
+}
