@@ -1,1 +1,1 @@
-"use strict";console.log("initial script variables");
+"use strict";console.log("initial script variables");var $audio=document.querySelector("#audio"),$cardImage=document.querySelector("#card-image"),$songAuthor=document.querySelector("#song-author"),$songName=document.querySelector("#song-name");

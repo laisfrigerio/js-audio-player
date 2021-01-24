@@ -19,7 +19,7 @@ function css() {
 
 function js() {
     return gulp.src(baseScripts)
-        .pipe(babel({presets: ['env']}))
+        .pipe(babel())
         .pipe(uglify())
         .pipe(gulp.dest("./js"));
 }

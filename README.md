@@ -23,6 +23,19 @@ An audio player made with pure javascript :blue_heart:
 - Fontawesome icons
 - Create logo [here](https://fontmeme.com/netflix-font/)
 
+## Run
+
+```
+  npm install
+  npm run dev:watch
+```
+
+## Generate Build
+
+```
+  npm run build
+```
+
 ## :woman: Author
 
 [@laisfrigerio](https://github.com/laisfrigerio/)
