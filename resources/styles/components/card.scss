@@ -7,6 +7,21 @@
     box-shadow: 0 0 15px 4px $gray-border;
     max-width: 350px;
 
+    .card-image {
+        @extend %flexbox;
+        @include flex-align-items(center);
+        @include flex-jus(center);
+        background-color: $gray-bg;
+        // background: url("https://via.placeholder.com/300.png?text=image") no-repeat center center / cover;
+        height: 200px;
+        overflow: hidden;
+        width: 100%;
+    
+        img {
+            width: 100%;
+        }
+    }
+
     .card-content {
         padding: 10px 20px;
 
