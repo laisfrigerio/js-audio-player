@@ -23,6 +23,18 @@ An audio player made with pure javascript :blue_heart:
 - Fontawesome icons
 - Create logo [here](https://fontmeme.com/netflix-font/)
 
+## Features
+
+- :ballot_box_with_check: Setup project
+- :black_square_button: Dark/Light Mode
+- :black_square_button: Play a music
+- :black_square_button: Pause a music
+- :black_square_button: Play next music
+- :black_square_button: Play previous music
+- :black_square_button: Auto player musics
+- :black_square_button: List tracks from an album
+- :black_square_button: TDD
+
 ## Run
 
 ```
