@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap);
+* {
+  border: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  outline: none;
+  padding: 0; }
+
+.card, body {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.card {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-direction: normal;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 0 15px 4px #e6e6e6;
+  max-width: 350px; }
+  .card .card-content {
+    padding: 10px 20px; }
+    .card .card-content * {
+      color: #909090; }
+    .card .card-content h2 {
+      letter-spacing: 5px; }
+    .card .card-content h3 {
+      font-size: 13px;
+      margin-top: 5px; }
+    .card .card-content audio {
+      margin-top: 10px; }
+  .card .card-title {
+    padding: 15px 0 4px; }
+    .card .card-title h1 {
+      color: #1976d2;
+      letter-spacing: -2px; }
+
+body {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-direction: normal;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  background-color: #efefef;
+  height: 100vh; }
+
+.logo {
+  height: 50px; }
+
+picture {
+  background-color: #cecece;
+  background: url("https://via.placeholder.com/300.png?text=image") no-repeat center center/cover;
+  height: 200px;
+  width: 100%; }
+
