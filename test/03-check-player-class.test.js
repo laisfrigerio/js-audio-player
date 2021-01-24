@@ -57,11 +57,38 @@ describe('check player class', () => {
         expect(document.querySelector(songName).innerText).toEqual(music.title)
     })
 
-    it('check previous method', () => {
+    it('check next method on last item', () => {
+        const music = data[0]
+
+        const player = new Player(data)
+        player.start()
+
+        for (let i = 0; i < data.length; i++)
+            player.next()
+
+        expect(document.querySelector(audio).getAttribute('src')).toEqual(music.song)
+        expect(document.querySelector(songAuthor).innerText).toEqual(music.author)
+        expect(document.querySelector(songName).innerText).toEqual(music.title)
+    })
+
+    it('check previous method on first item', () => {
         const music = data[data.length - 1]
 
         const player = new Player(data)
         player.start()
+        player.previous()
+
+        expect(document.querySelector(audio).getAttribute('src')).toEqual(music.song)
+        expect(document.querySelector(songAuthor).innerText).toEqual(music.author)
+        expect(document.querySelector(songName).innerText).toEqual(music.title)
+    })
+
+    it('check previous method not first item', () => {
+        const music = data[0]
+
+        const player = new Player(data)
+        player.start()
+        player.next()
         player.previous()
 
         expect(document.querySelector(audio).getAttribute('src')).toEqual(music.song)

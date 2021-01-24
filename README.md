@@ -35,6 +35,7 @@ An audio player made with pure javascript :blue_heart:
 
 - :ballot_box_with_check: Setup project
 - :black_square_button: Dark/Light Mode
+- :black_square_button: Custmize player (add play/pause button, add next/previous button, etc)
 - :black_square_button: Play a music
 - :black_square_button: Pause a music
 - :black_square_button: Play next music
@@ -47,7 +48,7 @@ An audio player made with pure javascript :blue_heart:
 
 ```
   npm install
-  npm run dev:watch
+  npm run loc
 ```
 
 ## Generate Build

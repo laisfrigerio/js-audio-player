@@ -1,0 +1,39 @@
+.toggle-theme {
+    @extend %flexbox;
+    @include flex-align-items(center);
+    @include flex-jus(space-between);
+    width: 60px;
+    input { display: none; }
+    i { color: $gray-text; }
+    > button {
+        @extend %flexbox;
+        @include flex-align-items(center);
+        background-color: $white;
+        border-radius: 50px;
+        cursor: pointer;
+        height: 20px;
+        padding: 5px;
+        width: 35px;
+        .toggle {
+            background-color: $gray-text;
+            height: 15px;
+            border-radius: 50%;
+            width: 15px;
+        }
+    }
+}
+
+.dark-theme {
+    .toggle-theme {
+        .toggle {
+            transform: translateX(10px);
+        }
+        i { color: $white; }
+        > button {
+            background-color: black;
+            .toggle {
+                background-color: $white;
+            }
+        }
+    }
+}

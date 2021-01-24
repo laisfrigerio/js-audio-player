@@ -1,15 +1,22 @@
 extends ../frameset.pug
 
+block styles
+    link(rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous")
+
 block content
-    article(class="card")
-        div(class="card-title")
-            img(class="logo" src="../images/logo.png" atl="Logo" title="Logo")
+    include ../components/header.pug
+
+    section
+        article(class="card")
+
+            div(class="card-title")
+                img(class="logo" src="../images/logo.png" atl="Logo" title="Logo")
+            
+            picture(class="card-image")
+                img(id="card-image" src="https://via.placeholder.com/300.png?text=image")
         
-        picture(class="card-image")
-            img(id="card-image" src="https://via.placeholder.com/300.png?text=image")
-    
-        div(class="card-content")
-            h2(class="song-name" id="song-name") Title
-            h3(class="song-author" id="song-author") Author
-            div(class="player")
-                audio(id="audio" controls)
+            div(class="card-content")
+                h2(class="song-name" id="song-name") Title
+                h3(class="song-author" id="song-author") Author
+                div(class="player")
+                    audio(id="audio" controls)
