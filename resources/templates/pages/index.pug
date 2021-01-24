@@ -1,12 +1,9 @@
 extends ../frameset.pug
 
-block styles
-    link(rel="stylesheet", href="./css/app.css")
-
 block content
     article(class="card")
         div(class="card-title")
-            img(class="logo" src="./images/logo.png" atl="Logo" title="Logo")
+            img(class="logo" src="../images/logo.png" atl="Logo" title="Logo")
         
         picture(class="card-image" id="card-image")
         
@@ -14,8 +11,4 @@ block content
             h2(class="song-name" id="song-name") Hello
             h3(class="song-author" id="song-author") Adele
             div(class="player")
-                audio(id="audio" controls src="./audios/25/adele-hello.mp3")
-
-block scripts
-    script(src="./js/variables.js" type="text/javascript")
-    script(src="./js/player.js" type="text/javascript")
+                audio(id="audio" controls src="../audios/25/adele-hello.mp3")

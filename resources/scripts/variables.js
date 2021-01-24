@@ -1,6 +1,4 @@
-console.log("initial script variables")
-
-const $audio = document.querySelector("#audio");
-const $cardImage = document.querySelector("#card-image");
-const $songAuthor = document.querySelector("#song-author");
-const $songName = document.querySelector("#song-name");
+export const audio      = "#audio";
+export const cardImage  = "#card-image";
+export const songAuthor = "#song-author";
+export const songName   = "#song-name";
