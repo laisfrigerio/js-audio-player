@@ -3,17 +3,34 @@ import path from 'path'
 import Player from '../resources/scripts/player'
 import data from '../resources/scripts/audios'
 import { audio, cardImage, songAuthor, songName } from '../resources/scripts/variables'
+import { type } from 'os'
 
 const html = fs.readFileSync(path.resolve(__dirname, '../public/index.html'))
+let pause, play, load
 
 describe('check player class', () => {
 
     beforeEach(() => {
         document.documentElement.innerHTML = html.toString()
+
+        play = jest
+            .spyOn(window.HTMLMediaElement.prototype, 'play')
+            .mockImplementation(() => {})
+
+        load = jest
+            .spyOn(window.HTMLMediaElement.prototype, 'load')
+            .mockImplementation(() => {})
+
+        pause = jest
+            .spyOn(window.HTMLMediaElement.prototype, 'pause')
+            .mockImplementation(() => {})
     })
 
     afterEach(() => {
-        jest.resetModules();
+        jest.resetModules()
+        load.mockRestore()
+        pause.mockRestore()
+        play.mockRestore()
     })
 
     it('check methods is defined', () => {
@@ -94,5 +111,21 @@ describe('check player class', () => {
         expect(document.querySelector(audio).getAttribute('src')).toEqual(music.song)
         expect(document.querySelector(songAuthor).innerText).toEqual(music.author)
         expect(document.querySelector(songName).innerText).toEqual(music.title)
+    })
+
+    it('check show default image', () => {
+        const music = data[0]
+
+        const player = new Player(data)
+        player.start()
+        expect(document.querySelector(cardImage).getAttribute('src')).toEqual(music.image)
+
+        for(let i = 1; i < data.length; i++) {
+            const music = data[i]
+            player.next()
+            if (typeof music.image === 'undefined' || music.image == null) {
+                expect(document.querySelector(cardImage).getAttribute('src')).toEqual('https://via.placeholder.com/300.png?text=image')
+            }
+        }
     })
 })

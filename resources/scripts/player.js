@@ -30,19 +30,24 @@ export default class Player {
         }
 
         this.start()
+        this.play()
     }
 
     /**
      * Stop audio
      * @method pause
      */
-    pause () {}
+    pause () {
+        this.audio.pause()
+    }
 
     /**
      * Start audio
      * @method play
      */
-    play () {}
+    play () {
+        this.audio.play()
+    }
 
     /**
      * Play previous song of track list
@@ -56,6 +61,7 @@ export default class Player {
         }
 
         this.start()
+        this.play()
     }
 
     /**
@@ -65,11 +71,16 @@ export default class Player {
     start () {
         this.current = this.data[this.index]
         this.audio.setAttribute('src', this.current.song)
+        this.audio.load()
         this.songAuthor.innerText = this.current.author
         this.songName.innerText = this.current.title
 
         if (this.current.image) {
             this.cardImage.setAttribute('src', this.current.image)
+            return
         }
+
+        //- Default image
+        this.cardImage.setAttribute('src', 'https://via.placeholder.com/300.png?text=image')
     }
 }
