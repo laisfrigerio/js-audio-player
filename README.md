@@ -12,13 +12,27 @@ An audio player made with pure javascript :blue_heart:
 
 <p align="center">
   <a href="https://github.com/laisfrigerio/js-audio-player">
-    <img src="./screenshots/desktop.png" alt="Application screenshot from Desktop device">
+    <img src="./screenshots/desktop.png" alt="Application screenshot from Desktop device - Light theme">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/laisfrigerio/js-audio-player">
-    <img src="./screenshots/mobile.png" alt="Application screenshot from Mobile device">
+    <img src="./screenshots/mobile.png" alt="Application screenshot from Mobile device - Light theme">
+  </a>
+</p>
+
+### Dark theme
+
+<p align="center">
+  <a href="https://github.com/laisfrigerio/js-audio-player">
+    <img src="./screenshots/desktop-dark.png" alt="Application screenshot from Desktop device - Dark theme">
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/laisfrigerio/js-audio-player">
+    <img src="./screenshots/mobile-dark.png" alt="Application screenshot from Mobile device - Dark theme">
   </a>
 </p>
 
