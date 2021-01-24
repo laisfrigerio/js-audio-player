@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: {
         app: path.resolve(__dirname, 'resources', 'styles', 'app.scss'),
+        index: path.resolve(__dirname, 'resources', 'scripts', 'index.js'),
     },
 
     output: {

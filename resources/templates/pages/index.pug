@@ -5,10 +5,11 @@ block content
         div(class="card-title")
             img(class="logo" src="../images/logo.png" atl="Logo" title="Logo")
         
-        picture(class="card-image" id="card-image")
-        
+        picture(class="card-image")
+            img(id="card-image" src="https://via.placeholder.com/300.png?text=image")
+    
         div(class="card-content")
-            h2(class="song-name" id="song-name") Hello
-            h3(class="song-author" id="song-author") Adele
+            h2(class="song-name" id="song-name") Title
+            h3(class="song-author" id="song-author") Author
             div(class="player")
-                audio(id="audio" controls src="../audios/25/adele-hello.mp3")
+                audio(id="audio" controls)

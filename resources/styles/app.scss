@@ -15,10 +15,3 @@ body {
 }
 
 .logo { height: 50px; }
-
-picture {
-    background-color: $gray-bg;
-    background: url("https://via.placeholder.com/300.png?text=image") no-repeat center center / cover;
-    height: 200px;
-    width: 100%;
-}

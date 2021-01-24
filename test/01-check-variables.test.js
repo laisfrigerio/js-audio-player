@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 const html = fs.readFileSync(path.resolve(__dirname, '../public/index.html'))
-import { audio, cardImage, songAuthor, songName } from '../resources/scripts/variables';
+import { audio, cardImage, songAuthor, songName } from '../resources/scripts/variables'
 
 describe('check elements exists', () => {
 
