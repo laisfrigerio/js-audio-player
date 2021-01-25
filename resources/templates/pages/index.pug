@@ -16,7 +16,20 @@ block content
                 img(id="card-image" src="https://via.placeholder.com/300.png?text=image")
         
             div(class="card-content")
+                button(class="btn-cta fas fa-play" id="btn-cta")
+
                 h2(class="song-name" id="song-name") Title
+               
                 h3(class="song-author" id="song-author") Author
+                
                 div(class="player")
-                    audio(id="audio" controls)
+                    audio(id="audio")
+                    
+                    div(class="control-time")
+                        small(class="current-duration" id="current-duration") 00:00
+                        input(class="range-time" id="range-time" type="range" min="0" max="0" step="1")
+                        small(class="total-duration" id="total-duration") 00:00
+                    
+                    div(class="control-volume")
+                        div(class="ico-volume fas fa-volume" id="ico-volume")
+                        input(class="range-volume" id="range-volume" type="range" min="0" max="100" step="1" value="100")

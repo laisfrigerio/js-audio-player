@@ -12,13 +12,13 @@ An audio player made with pure javascript :blue_heart:
 
 <p align="center">
   <a href="https://github.com/laisfrigerio/js-audio-player">
-    <img src="./screenshots/desktop.png" alt="Application screenshot from Desktop device - Light theme">
+    <img src="./screenshots/desktop-custom.png" alt="Application screenshot from Desktop device - Light theme">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/laisfrigerio/js-audio-player">
-    <img src="./screenshots/mobile.png" alt="Application screenshot from Mobile device - Light theme">
+    <img src="./screenshots/mobile-custom.png" alt="Application screenshot from Mobile device - Light theme">
   </a>
 </p>
 
@@ -26,13 +26,13 @@ An audio player made with pure javascript :blue_heart:
 
 <p align="center">
   <a href="https://github.com/laisfrigerio/js-audio-player">
-    <img src="./screenshots/desktop-dark.png" alt="Application screenshot from Desktop device - Dark theme">
+    <img src="./screenshots/desktop-dark-custom.png" alt="Application screenshot from Desktop device - Dark theme">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/laisfrigerio/js-audio-player">
-    <img src="./screenshots/mobile-dark.png" alt="Application screenshot from Mobile device - Dark theme">
+    <img src="./screenshots/mobile-dark-custom.png" alt="Application screenshot from Mobile device - Dark theme">
   </a>
 </p>
 
@@ -43,20 +43,21 @@ An audio player made with pure javascript :blue_heart:
 - Javascript
 - Gulp (To compile sass/pug/js)
 - Fontawesome icons
+- Unit tests with JEST (97.47% of coverage)
 - Create logo [here](https://fontmeme.com/netflix-font/)
 
 ## Features
 
 - :ballot_box_with_check: Setup project
 - :ballot_box_with_check: Dark/Light Mode
-- :black_square_button: Custmize player (add play/pause button, add next/previous button, etc)
-- :black_square_button: Play a music
-- :black_square_button: Pause a music
+- :ballot_box_with_check: Custmize player (add play/pause button, add next/previous button, etc)
+- :ballot_box_with_check: Play a music
+- :ballot_box_with_check: Pause a music
+- :ballot_box_with_check: Auto player (got to next music)
+- :ballot_box_with_check: TDD
+- :black_square_button: List tracks from an album
 - :black_square_button: Play next music
 - :black_square_button: Play previous music
-- :black_square_button: Auto player musics
-- :black_square_button: List tracks from an album
-- :black_square_button: TDD
 
 ## Run
 

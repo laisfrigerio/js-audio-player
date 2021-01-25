@@ -1,4 +1,5 @@
-import { audio, cardImage, songAuthor, songName } from './variables'
+import { audio, btnCta, cardImage, currentDuration, icoVolume, rangeTime, songAuthor, songName, totalDuration } from './variables'
+import { secondsToMinutes } from './utils'
 
 /**
  * Class Player
@@ -12,10 +13,17 @@ export default class Player {
     constructor (data) {
         this.data = data
         this.index = 0
+        this.isMute = false
+        this.isPlaying = false
         this.audio = document.querySelector(audio)
+        this.btnCta = document.querySelector(btnCta)
         this.cardImage = document.querySelector(cardImage)
+        this.currentDuration = document.querySelector(currentDuration)
+        this.icoVolume = document.querySelector(icoVolume)
+        this.rangeTime = document.querySelector(rangeTime)
         this.songAuthor = document.querySelector(songAuthor)
         this.songName = document.querySelector(songName)
+        this.totalDuration = document.querySelector(totalDuration)
     }
 
     /**
@@ -33,11 +41,17 @@ export default class Player {
         this.play()
     }
 
+    onTimeUpdate () {
+        this.setCurrentDuration(this.audio.currentTime)
+        this.rangeTime.value = this.audio.currentTime
+    }
+
     /**
      * Stop audio
      * @method pause
      */
     pause () {
+        this.toggleBtnCta("fa-play", "fa-pause")
         this.audio.pause()
     }
 
@@ -46,6 +60,7 @@ export default class Player {
      * @method play
      */
     play () {
+        this.toggleBtnCta("fa-pause", "fa-play")
         this.audio.play()
     }
 
@@ -62,6 +77,22 @@ export default class Player {
 
         this.start()
         this.play()
+    }
+
+    setCurrentDuration (value) {
+        this.currentDuration.innerText = secondsToMinutes(value)
+    }
+
+    setAudioCurrentTime (value) {
+        this.audio.currentTime = value
+    }
+
+    setTotalDuration (value) {
+        this.totalDuration.innerText = secondsToMinutes(value)
+    }
+
+    setVolume (value) {
+        this.audio.volume = value / 100
     }
 
     /**
@@ -82,5 +113,19 @@ export default class Player {
 
         //- Default image
         this.cardImage.setAttribute('src', 'https://via.placeholder.com/300.png?text=image')
+    }
+
+    toggleBtnCta (addClass, removeClass) {
+        this.isPlaying = !this.isPlaying
+        this.btnCta.classList.remove(removeClass)
+        this.btnCta.classList.add(addClass)
+    }
+
+    toggleMute () {
+        this.isMute = !this.isMute
+        this.icoVolume.classList.remove(...this.icoVolume.classList)
+        this.audio.muted = !this.audio.muted
+        this.isMute ? this.icoVolume.classList.add("ico-volume", "fas", "fa-volume-mute")
+                    : this.icoVolume.classList.add("ico-volume", "fas", "fa-volume")
     }
 }

@@ -2,8 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import Player from '../resources/scripts/player'
 import data from '../resources/scripts/audios'
-import { audio, cardImage, songAuthor, songName } from '../resources/scripts/variables'
-import { type } from 'os'
+import { audio, btnCta, cardImage, currentDuration, songAuthor, songName, icoVolume, totalDuration, rangeTime } from '../resources/scripts/variables'
 
 const html = fs.readFileSync(path.resolve(__dirname, '../public/index.html'))
 let pause, play, load
@@ -37,10 +36,17 @@ describe('check player class', () => {
         const player = new Player()
 
         expect(typeof player.next === 'function').toEqual(true)
+        expect(typeof player.onTimeUpdate === 'function').toEqual(true)
         expect(typeof player.pause === 'function').toEqual(true)
         expect(typeof player.play === 'function').toEqual(true)
         expect(typeof player.previous === 'function').toEqual(true)
+        expect(typeof player.setCurrentDuration === 'function').toEqual(true)
+        expect(typeof player.setAudioCurrentTime === 'function').toEqual(true)
+        expect(typeof player.setTotalDuration === 'function').toEqual(true)
+        expect(typeof player.setVolume === 'function').toEqual(true)
         expect(typeof player.start === 'function').toEqual(true)
+        expect(typeof player.toggleBtnCta === 'function').toEqual(true)
+        expect(typeof player.toggleMute === 'function').toEqual(true)
     })
     
     it('check data send to Player class', () => {
@@ -128,4 +134,91 @@ describe('check player class', () => {
             }
         }
     })
+
+    /**
+     * Toggle play/pause
+     */
+    it('toggle play/pause button', () => {
+        const player = new Player(data)
+
+        player.start()
+        player.play()
+
+        expect(player.isPlaying).not.toBeUndefined()
+        expect(player.isPlaying).toBeTruthy()
+        expect(document.querySelector(btnCta).classList.contains("fa-pause")).toBeTruthy()
+
+        player.pause()
+        expect(player.isPlaying).toBeFalsy()
+        expect(document.querySelector(btnCta).classList.contains("fa-play")).toBeTruthy()
+    })
+
+    /**
+     * Toggle mute button
+     */
+    it('toggle mute button', () => {
+        const player = new Player(data)
+        player.start()
+
+        expect(player.isMute).not.toBeUndefined()
+        expect(player.isMute).toBeFalsy()
+        expect(document.querySelector(icoVolume).classList.contains("fa-volume")).toBeTruthy()
+        expect(document.querySelector(audio).muted).toBeFalsy()
+
+        player.toggleMute()
+        expect(player.isMute).toBeTruthy()
+        expect(document.querySelector(icoVolume).classList.contains("fa-volume-mute")).toBeTruthy()
+        expect(document.querySelector(audio).muted).toBeTruthy()
+    })
+
+    /**
+     * Test up/down volume from audio player
+     */
+    it('check up/down volume', () => {
+        const player = new Player(data)
+        player.start()
+
+        expect(document.querySelector(audio).volume).toBe(1)
+        player.setVolume(50)
+        expect(document.querySelector(audio).volume).toBe(0.5)
+    })
+
+    /**
+     * Test audio duration
+     */
+    it('check up/down volume', () => {
+        const player = new Player(data)
+        player.start()
+        player.setAudioCurrentTime(20)
+        expect(document.querySelector(audio).currentTime).toBe(20)
+
+        player.setAudioCurrentTime(100)
+        expect(document.querySelector(audio).currentTime).toBe(100)
+    })
+
+    /**
+     * Test audio duration
+     */
+    it('get audio duration', () => {
+        const player = new Player(data)
+        player.start()
+        player.setCurrentDuration(2)
+        expect(document.querySelector(currentDuration).innerText).toBe("00:02")
+
+        player.setTotalDuration(100)
+        expect(document.querySelector(totalDuration).innerText).toBe("01:40")
+    })
+
+    /**
+     * Test audio time update
+     */
+    it('get audio duration', () => {
+        const player = new Player(data)
+        player.start()
+        
+        player.setAudioCurrentTime(2)
+        player.onTimeUpdate()
+        expect(document.querySelector(currentDuration).innerText).toBe("00:02")
+    })
+
 })
