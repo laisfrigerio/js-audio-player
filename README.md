@@ -49,14 +49,14 @@ An audio player made with pure javascript :blue_heart:
 
 - :ballot_box_with_check: Setup project
 - :ballot_box_with_check: Dark/Light Mode
-- :black_square_button: Custmize player (add play/pause button, add next/previous button, etc)
-- :black_square_button: Play a music
-- :black_square_button: Pause a music
+- :ballot_box_with_check: Custmize player (add play/pause button, add next/previous button, etc)
+- :ballot_box_with_check: Play a music
+- :ballot_box_with_check: Pause a music
 - :black_square_button: Play next music
 - :black_square_button: Play previous music
-- :black_square_button: Auto player musics
+- :ballot_box_with_check: Auto player (got to next music)
 - :black_square_button: List tracks from an album
-- :black_square_button: TDD
+- :ballot_box_with_check: TDD
 
 ## Run
 
