@@ -1,6 +1,6 @@
 {
   "name": "js-audio-player",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Audio Player with pure javascript",
   "scripts": {
     "loc": "webpack --config webpack.config.loc.js --watch",
