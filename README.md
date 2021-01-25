@@ -41,7 +41,7 @@ An audio player made with pure javascript :blue_heart:
 - HTML/PUG
 - CSS/SASS
 - Javascript
-- Gulp (To compile sass/pug/js)
+- Webpack (To compile sass/pug/js)
 - Fontawesome icons
 - Unit tests with JEST (97.47% of coverage)
 - Create logo [here](https://fontmeme.com/netflix-font/)
@@ -49,6 +49,7 @@ An audio player made with pure javascript :blue_heart:
 ## Features
 
 - :ballot_box_with_check: Setup project
+- :ballot_box_with_check: Cross Browser Flexbox
 - :ballot_box_with_check: Dark/Light Mode
 - :ballot_box_with_check: Custmize player (add play/pause button, add next/previous button, etc)
 - :ballot_box_with_check: Play a music
