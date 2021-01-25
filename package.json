@@ -1,6 +1,6 @@
 {
   "name": "js-audio-player",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Audio Player with pure javascript",
   "scripts": {
     "deploy": "git subtree push --prefix public origin gh-pages",
