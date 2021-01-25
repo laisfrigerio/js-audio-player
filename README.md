@@ -12,13 +12,13 @@ An audio player made with pure javascript :blue_heart:
 
 <p align="center">
   <a href="https://github.com/laisfrigerio/js-audio-player">
-    <img src="./screenshots/desktop.png" alt="Application screenshot from Desktop device - Light theme">
+    <img src="./screenshots/desktop-custom.png" alt="Application screenshot from Desktop device - Light theme">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/laisfrigerio/js-audio-player">
-    <img src="./screenshots/mobile.png" alt="Application screenshot from Mobile device - Light theme">
+    <img src="./screenshots/mobile-custom.png" alt="Application screenshot from Mobile device - Light theme">
   </a>
 </p>
 
@@ -26,13 +26,13 @@ An audio player made with pure javascript :blue_heart:
 
 <p align="center">
   <a href="https://github.com/laisfrigerio/js-audio-player">
-    <img src="./screenshots/desktop-dark.png" alt="Application screenshot from Desktop device - Dark theme">
+    <img src="./screenshots/desktop-dark-custom.png" alt="Application screenshot from Desktop device - Dark theme">
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/laisfrigerio/js-audio-player">
-    <img src="./screenshots/mobile-dark.png" alt="Application screenshot from Mobile device - Dark theme">
+    <img src="./screenshots/mobile-dark-custom.png" alt="Application screenshot from Mobile device - Dark theme">
   </a>
 </p>
 
