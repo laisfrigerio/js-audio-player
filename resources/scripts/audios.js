@@ -1,4 +1,4 @@
-const basePath = '../audios'
+const basePath = './audios'
 
 export default [
     {
