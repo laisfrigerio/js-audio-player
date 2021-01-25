@@ -1,24 +1,26 @@
 @import './reset';
 @import './variables/colors';
 @import './variables/fonts';
+@import './variables/rules';
 @import './variables/mixins';
+@import './components/dark-mode';
 @import './components/card';
+@import './components/header';
 
 body {
-    @extend %flexbox;
-    @include flex-align-items(center);
-    @include flex-dir(column);
-    @include flex-jus(center);
     background-color: $bg;
     height: 100vh;
+    &.dark-theme {
+        background-color: $dark-bg;
+    }
 
+    section {
+        @extend %flexbox;
+        @include flex-align-items(center);
+        @include flex-dir(column);
+        @include flex-jus(center);
+        height: 100vh;
+    }
 }
 
 .logo { height: 50px; }
-
-picture {
-    background-color: $gray-bg;
-    background: url("https://via.placeholder.com/300.png?text=image") no-repeat center center / cover;
-    height: 200px;
-    width: 100%;
-}

@@ -1,0 +1,18 @@
+.header {
+    @extend %flexbox;
+    @include flex-jus(flex-end);
+    background-color: $gray-border;
+    height: 50px;
+    left: 0;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: $z-index-high;
+}
+
+.dark-theme {
+    .header {
+        background-color: $dark;
+    }
+}

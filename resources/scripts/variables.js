@@ -1,6 +1,10 @@
-console.log("initial script variables")
-
-const $audio = document.querySelector("#audio");
-const $cardImage = document.querySelector("#card-image");
-const $songAuthor = document.querySelector("#song-author");
-const $songName = document.querySelector("#song-name");
+export const audio             = "#audio"
+export const btnCta            = "#btn-cta"
+export const cardImage         = "#card-image"
+export const currentDuration   = "#current-duration"
+export const totalDuration     = "#total-duration"
+export const icoVolume         = "#ico-volume"
+export const rangeTime         = "#range-time"
+export const rangeVolume       = "#range-volume"
+export const songAuthor        = "#song-author"
+export const songName          = "#song-name"
